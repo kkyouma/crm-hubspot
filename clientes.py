@@ -1,5 +1,5 @@
 import pandas as pd
-import faker import Faker
+from faker import Faker
 
 faker = Faker('es_CL')
 
