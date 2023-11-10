@@ -11,5 +11,9 @@ def generar_cliente():
 
   return {"Nombre": nombre, "Correo": correo, "Telefono": telefono, "Direccion": direccion}
 
-num_clientes = 100 #Cantidad de filas que se agregaran
+num_clientes = 100 #Cantidad de iteraciones (filas) que se agregaran
 clientes = [generar_cliente() for _ in range (num_clientes)]
+
+df = pd.DataFrame(clientes)
+
+df.to_csv("datos_clientes")
