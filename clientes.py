@@ -8,10 +8,11 @@ def generar_cliente():
   correo = fake.email()
   telefono = fake.phone_number()
   direccion = fake.address()
+  ciudad = fake.city()
 
-  return {"Nombre": nombre, "Correo": correo, "Telefono": telefono, "Direccion": direccion}
+  return {"Nombre": nombre, "Correo": correo, "Telefono": telefono, "Ciudad": ciudad,"Direccion": direccion}
 
-num_clientes = 100 #Cantidad de iteraciones (filas) que se agregaran
+num_clientes = 100 #Cantidad de iteraciones (filas) de datos
 clientes = [generar_cliente() for _ in range (num_clientes)]
 
 df = pd.DataFrame(clientes)
