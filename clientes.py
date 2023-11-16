@@ -17,4 +17,4 @@ clientes = [generar_cliente() for _ in range (num_clientes)]
 
 df = pd.DataFrame(clientes)
 
-df.to_csv("datos_clientes")
+df.to_csv("datos_clientes") 
